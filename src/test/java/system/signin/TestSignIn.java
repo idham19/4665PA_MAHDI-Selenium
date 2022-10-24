@@ -20,6 +20,5 @@ public class TestSignIn extends Base {
         page.clickSignInButton();
         signInPage.signIn(userName,password);
         assertTrue(accountPage.myAccountHeadingText.isDisplayed());
-
     }
 }
