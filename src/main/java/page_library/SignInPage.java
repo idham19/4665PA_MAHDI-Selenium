@@ -30,9 +30,10 @@ public class SignInPage extends Base {
     public void clickSubmitButton() {
         clickElement(submitLoginButton);
     }
-    public void signIn(String userName, String password){
+    public AccountPage signIn(String userName, String password){
         setPasswordInput(userName);
         setPasswordInput(password);
         clickSubmitButton();
+        return new AccountPage();
     }
 }
