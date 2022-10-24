@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -60,6 +61,11 @@ public class Base {
     public void sendKeysToElements(WebElement element,String keys){
         wait.until(ExpectedConditions.visibilityOf(element));
         element.sendKeys(keys);
+    }
+    public void moveToElements(WebElement element){
+        wait.until(ExpectedConditions.visibilityOf(element));
+        Actions actions =new Actions(driver);
+        actions.moveToElement(element).perform();
     }
 
 }

@@ -1,4 +1,4 @@
-package system.signin;
+package system.authentication;
 
 import base.Base;
 import org.testng.annotations.Test;
