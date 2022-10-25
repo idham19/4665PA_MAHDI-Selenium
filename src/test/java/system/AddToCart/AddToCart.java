@@ -15,7 +15,7 @@ public class AddToCart extends Base {
     public void addingItemsToCartTest() throws InterruptedException {
         HomePage homePage = new HomePage();
         SearchingPage searchingPage =new SearchingPage();
-        String item = "dress";
+        String item =prop.getProperty("item_to_search") ;
         homePage.searchItems(item);
         searchingPage.addingItemsToCart();
         assertTrue("this confirmation should appear after clicking add button",searchingPage.addCartConfirmation.isDisplayed());

@@ -11,7 +11,7 @@ public class TestSearchItems extends Base {
     @Test
     public void searchItemsTest() {
         HomePage homePage = new HomePage();
-        String item = "short";
+        String item = prop.getProperty("item_to_search");
         homePage.searchItems(item);
         assertEquals(homePage.searchedItem.getText().toLowerCase().replace("\"",""),item.toLowerCase());
     }

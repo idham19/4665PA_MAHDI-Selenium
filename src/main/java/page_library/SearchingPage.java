@@ -27,9 +27,14 @@ public class SearchingPage extends Base {
         addToCartButton.click();
     }
 
-    public void addingItemsToCart() {
+    public void clickItem() {
+        clickElement(item);
+    }
+
+    public AddingToCartPage addingItemsToCart() {
         hover();
         clickAddToCartButton();
+        return new AddingToCartPage();
     }
 
 }
