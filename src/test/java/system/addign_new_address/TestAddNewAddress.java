@@ -28,8 +28,6 @@ public class TestAddNewAddress extends Base {
         myAddressesPage.clickAddNewAddressButton();
         WebElement addressesHeader = myAddressesPage.yourAddressesHeader;
 
-        assertTrue("this h2 header should be displayed",addressesHeader.isDisplayed());
-
-
+        assertTrue("this h2 header should be displayed", addressesHeader.isDisplayed());
     }
 }

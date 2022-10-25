@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class SearchingPage extends Base {
+public class ProductPage extends Base {
     @FindBy(xpath = "//img[@src='http://automationpractice.com/img/p/1/2/12-home_default.jpg']")
     public WebElement item;
     @FindBy(xpath = "//ul[@class='product_list grid row']/li[1]/div/div[2]/div[2]/a[2]")
@@ -15,7 +15,7 @@ public class SearchingPage extends Base {
     @FindBy(id = "add_to_cart")
     public WebElement addCartConfirmation;
 
-    public SearchingPage() {
+    public ProductPage() {
         PageFactory.initElements(driver, this);
     }
 

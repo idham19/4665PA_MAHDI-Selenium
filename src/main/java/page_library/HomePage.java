@@ -33,10 +33,10 @@ public class HomePage extends Base {
         clickElement(searchButton);
     }
 
-    public SearchingPage searchItems(String items) {
+    public ProductPage searchItems(String items) {
         setSearchInput(items);
         clickSearchButton();
-        return new SearchingPage();
+        return new ProductPage();
     }
 
 }
