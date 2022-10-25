@@ -5,11 +5,9 @@ import org.testng.annotations.Test;
 import page_library.HomePage;
 import page_library.SearchingPage;
 
-import java.util.concurrent.TimeUnit;
-
 import static org.testng.AssertJUnit.assertTrue;
 
-public class AddToCart extends Base {
+public class TestAddToCart extends Base {
 
     @Test
     public void addingItemsToCartTest() throws InterruptedException {

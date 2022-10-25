@@ -9,7 +9,6 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.opera.OperaDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
@@ -43,28 +42,30 @@ public class Base {
             driver = new OperaDriver();
         }
 
-        wait = new WebDriverWait(driver,Long.parseLong(prop.getProperty("driver_timeout")));
+        wait = new WebDriverWait(driver, Long.parseLong(prop.getProperty("driver_timeout")));
         driver.get(prop.getProperty("url"));
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
     }
+
     @AfterTest
-    public void tearDown(){
+    public void tearDown() {
         driver.quit();
     }
 
-    public static void clickElement(WebElement element){
+    public static void clickElement(WebElement element) {
         wait.until(ExpectedConditions.elementToBeClickable(element));
         element.click();
     }
 
-    public void sendKeysToElements(WebElement element,String keys){
+    public void sendKeysToElements(WebElement element, String keys) {
         wait.until(ExpectedConditions.visibilityOf(element));
         element.sendKeys(keys);
     }
-    public void moveToElements(WebElement element){
+
+    public void moveToElements(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
-        Actions actions =new Actions(driver);
+        Actions actions = new Actions(driver);
         actions.moveToElement(element).perform();
     }
 

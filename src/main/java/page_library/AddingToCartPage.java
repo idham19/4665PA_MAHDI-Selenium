@@ -15,7 +15,7 @@ public class AddingToCartPage extends Base {
         PageFactory.initElements(driver, this);
     }
 
-    public void changeColor(WebElement color){
+    public void changeColor(WebElement color) {
         clickElement(color);
     }
 

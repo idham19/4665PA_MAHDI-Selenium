@@ -24,6 +24,5 @@ public class TestChangingColor extends Base {
         WebElement orangeDress= addingToCartPage.orangeDress;
         addingToCartPage.changeColor(orangeColor);
         assertTrue("the dress should be  displayed in orange",orangeDress.isDisplayed());
-
     }
 }
