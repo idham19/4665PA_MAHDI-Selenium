@@ -11,9 +11,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Optional;
+import org.testng.annotations.*;
 
 import java.util.Properties;
 
@@ -26,7 +24,7 @@ public class Base {
         prop = Config.loadProperties();
     }
 
-    @BeforeTest
+    @BeforeMethod
     public void initDriver(@Optional("chrome") String browser) {
         if (browser.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
@@ -48,7 +46,7 @@ public class Base {
         driver.manage().deleteAllCookies();
     }
 
-    @AfterTest
+    @AfterMethod
     public void tearDown() {
         driver.quit();
     }

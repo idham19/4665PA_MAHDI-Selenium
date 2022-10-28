@@ -2,16 +2,22 @@
 
 <suite name="Smoke Test Suite" verbose="1">
 
-    <!--    <parameter name="browser" value="firefox"/>-->
+    <parameter name="browser" value="chrome"/>
 
     <test name="Smoke">
-        <groups>
-            <run>
-                <include name="smoke"/>
-            </run>
-        </groups>
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="smoke"/>-->
+<!--            </run>-->
+<!--        </groups>-->
         <classes>
             <class name="system.clickSigninButton.TestClickSignIn"/>
+            <class name="system.search_items.TestSearchItems"/>
+            <class name="system.addign_new_address.TestAddNewAddress"/>
+            <class name="system.AddToCart.TestAddToCart"/>
+            <class name="system.authentication.TestSignIn"/>
+            <class name="system.change_quantity_item.TestChangeQuantity"/>
+            <class name="system.changing_color_items.TestChangingColor"/>
         </classes>
     </test>
 

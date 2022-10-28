@@ -12,9 +12,8 @@ public class TestClickSignIn extends Base {
 
     @Test(groups = "smoke")
     public void testSignIn() {
-        SignInPage signInPage = new SignInPage();
         HomePage homePage = new HomePage();
-        homePage.clickSignInButton();
+        SignInPage signInPage = homePage.clickSignInButton();
         WebElement alreadyRegisteredString = signInPage.alreadyRegisteredSubHeading;
         assertTrue(alreadyRegisteredString.isDisplayed());
     }

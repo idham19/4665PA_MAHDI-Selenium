@@ -12,10 +12,11 @@ public class TestAddToCart extends Base {
     @Test
     public void addingItemsToCartTest() throws InterruptedException {
         HomePage homePage = new HomePage();
-        ProductPage productPage =new ProductPage();
-        String item =prop.getProperty("item_to_search") ;
-        homePage.searchItems(item);
+        String item = prop.getProperty("item_to_search");
+
+        ProductPage productPage = homePage.searchItems(item);
         productPage.addingItemsToCart();
+
         assertTrue("this confirmation should appear after clicking add button", productPage.addCartConfirmation.isDisplayed());
     }
 

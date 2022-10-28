@@ -12,13 +12,13 @@ public class TestSignIn extends Base {
 
     @Test
     public void testSignIn(){
-        HomePage page =new HomePage();
-        SignInPage signInPage = new SignInPage();
-        AccountPage accountPage= new AccountPage();
         String userName= prop.getProperty("app_user");
         String password = prop.getProperty("app_password");
-        page.clickSignInButton();
-        signInPage.signIn(userName,password);
+
+        HomePage page = new HomePage();
+        SignInPage signInPage = page.clickSignInButton();
+        AccountPage accountPage = signInPage.signIn(userName,password);
+
         assertTrue(accountPage.myAccountHeadingText.isDisplayed());
     }
 }

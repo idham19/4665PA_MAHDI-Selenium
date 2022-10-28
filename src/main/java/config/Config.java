@@ -12,6 +12,8 @@ public class Config {
     private final static String DOC_PATH = ABS_PATH + RELATIVE_PATH;
     public static File propertiesFile = new File(DOC_PATH);
 
+
+
     public static Properties loadProperties() {
         prop = new Properties();
         try (FileInputStream fis = new FileInputStream(propertiesFile)) {
